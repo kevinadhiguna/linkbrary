@@ -11,6 +11,8 @@ export default function Username() {
     );
 }
 
+// Tell app what path you expect for username mapping 
 export function getStaticPaths() {}
 
+// Fetch all button data for a specific username
 export function getStaticProps() {}
