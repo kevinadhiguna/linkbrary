@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
@@ -18,10 +19,10 @@
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.21.1",
-    "@graphql-codegen/typescript": "^1.21.0",
-    "@graphql-codegen/typescript-operations": "^1.17.14",
-    "@graphql-codegen/typescript-react-apollo": "^2.2.1",
+    "@graphql-codegen/cli": "1.21.1",
+    "@graphql-codegen/typescript": "1.21.0",
+    "@graphql-codegen/typescript-operations": "1.17.14",
+    "@graphql-codegen/typescript-react-apollo": "2.2.1",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
