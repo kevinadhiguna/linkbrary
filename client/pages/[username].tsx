@@ -1,4 +1,4 @@
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 
 export default function Username() {
     const router = useRouter();
@@ -10,3 +10,7 @@ export default function Username() {
         </div>
     );
 }
+
+export function getStaticPaths() {}
+
+export function getStaticProps() {}
