@@ -1,5 +1,5 @@
 import { GetStaticPropsContext } from "next";
-import { useRouter } from "next/router";
+import Button from "../components/Button";
 import { initializeApollo } from "../lib/apolloClient";
 import { ButtonsDocument, ButtonsQuery, UsersDocument, UsersQuery } from "../lib/graphql/output";
 
@@ -8,13 +8,20 @@ type Props = {
     username: string;
 }
 
-export default function Username() {
-    const router = useRouter();
-    const { username } = router.query;
-    
+export default function Username({ data, username }: Props) {    
     return (
-        <div>
-            Username: {username}
+        <div className="min-h-screen max-w-2x1 mx-auto flex flex-col items-center py-10">
+            <h1 className="font-bold text-lg mb-10">@{username}</h1>
+            <div className="space-y-4 w-full">
+                {data.buttons?.map(btn => (
+                    <Button 
+                        key={btn?.text} 
+                        text={btn?.text!} 
+                        url={btn?.url!} 
+                    />
+                ))}
+            </div>
+            <div className="flex-1"></div>
         </div>
     );
 }
