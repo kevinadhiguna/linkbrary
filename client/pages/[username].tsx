@@ -19,7 +19,7 @@ export async function getStaticPaths() {
     const apolloClient = initializeApollo();
 
     const { data } = await apolloClient.query<UsersQuery>({
-        query: UsersDocument;
+        query: UsersDocument
     });
 
     return {
