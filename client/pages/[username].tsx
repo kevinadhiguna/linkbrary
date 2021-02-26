@@ -3,6 +3,11 @@ import { useRouter } from "next/router";
 import { initializeApollo } from "../lib/apolloClient";
 import { ButtonsDocument, ButtonsQuery, UsersDocument, UsersQuery } from "../lib/graphql/output";
 
+type Props = {
+    data: ButtonsQuery;
+    username: string;
+}
+
 export default function Username() {
     const router = useRouter();
     const { username } = router.query;
